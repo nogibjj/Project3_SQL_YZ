@@ -1,0 +1,14 @@
+# basic
+black
+pylint
+pytest
+kaggle
+
+# jupyter
+numpy
+panda
+matplotlib
+
+# sql
+sqlalchemy
+pandasql
