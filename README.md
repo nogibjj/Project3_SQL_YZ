@@ -2,8 +2,14 @@
 
 Generate a script that queries a database: MySQL, Sqlite, Spark or a cloud system. The query should be something useful to the user and be portfolio worthy.
 
-
+## 1. Download dataset from kaggle
 mkdir /home/codespace/.kaggle
 cp /workspaces/Week9_YZ/kaggle.json /home/codespace/.kaggle
 chmod 600 /home/codespace/kaggle/kaggle.json
-go to kaggle repo and run api
+cd /home/codespace/.kaggle
+copy api from kaggle, download the dataset
+cp train_users_2.csv.zip /workspaces/Week9_YZ
+
+
+## 2. Create database
+python load_db
