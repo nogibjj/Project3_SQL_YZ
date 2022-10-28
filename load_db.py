@@ -15,14 +15,13 @@ def create_connection(db_file):
     return conn
 
 
-def create_table(c, create_table_sql):
+def create_table(cur, create_table_sql):
     """ create a table from the create_table_sql statement
-    :param c: Connection object
     :param create_table_sql: a CREATE TABLE statement
     :return:
     """
     try:
-        c.execute(create_table_sql)
+        cur.execute(create_table_sql)
     except Error as e:
         print(e)
     
@@ -36,7 +35,6 @@ def add_data_to_db(cur, filename, db_name, num_cols, enc="utf-8"):
     :param enc: encoding of csv file
     :return:
     """
-    
     file = open(filename, "r", encoding=enc)
     contents = csv.reader(file)
     questionmarks = ", ".join(["?"] * num_cols)
@@ -72,9 +70,9 @@ def main():
 
     add_data_to_db(cursor, "train_users_2.csv", "train_user", 16)
 
-    # have a peek at the database
-    df = pd.read_sql_query("SELECT * FROM train_user LIMIT 5", db_connection)
-    print(df)
+    # Chcek if data is loaded
+    df = pd.read_sql_query("SELECT * FROM train_user", db_connection)
+    print(df.sample(5))
 
     db_connection.commit()
     db_connection.close()
