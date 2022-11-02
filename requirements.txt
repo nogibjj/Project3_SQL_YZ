@@ -13,3 +13,6 @@ seaborn
 # sql
 sqlalchemy
 pandasql
+
+# cli
+typer
