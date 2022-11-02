@@ -8,6 +8,7 @@ kaggle
 numpy
 panda
 matplotlib
+seaborn
 
 # sql
 sqlalchemy
