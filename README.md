@@ -36,13 +36,35 @@ cd /home/codespace/.kaggle
 #### Download the dataset
 copy api command and paste in the terminal:
 
-<img src=https://user-images.githubusercontent.com/110933007/199645134-d0603214-d3e8-4812-b6e9-bfd742d7baae.png width=40% height=40%>
+<img src=https://user-images.githubusercontent.com/110933007/199645134-d0603214-d3e8-4812-b6e9-bfd742d7baae.png width=60% height=60%>
 
-### Step 2： Build database using sqlite3
+### Step 2： Create a database using sqlite3
 
+In load_db.py, I wrote three functions to create a database connection to a SQLite databse, create a table in the database, and load data from csv file to the database. The created database is called *airbnb_database.db*
+Excute the code to create the database:
 ```
 python load_db.py
 ```
+
+### Step 3 Query user information from the database to build user profile
+
+Here are the SQL queries that I used to extract user information from the database:
+
+```
+SELECT age, COUNT(id) FROM train_user WHERE age BETWEEN 0 AND 80 GROUP BY age ORDER BY age;
+SELECT country_destination, COUNT(id) AS cd_num FROM train_user WHERE country_destination <> "NDF" GROUP BY country_destination ORDER BY cd_num DESC;
+SELECT COUNT(id) FROM train_user WHERE gender = 'MALE';
+SELECT COUNT(id) FROM train_user WHERE gender = "FEMALE";
+SELECT language, COUNT(language) AS lg_num FROM train_user GROUP BY language ORDER BY lg_num;
+SELECT SUM(CASE WHEN language = "en" THEN 1 END) FROM train_user ;
+SELECT SUM(CASE WHEN language <> "en" THEN 1 END) FROM train_user ;
+SELECT language, COUNT(language) AS lg_num FROM train_user WHERE language <> "en" GROUP BY language ORDER BY lg_num DESC;
+```
+
+### Step 4：Build a command line interface to retrieve user profile
+
+I used the typer library in python to build a command-line interface to retrieve the user information of airbnb. 
+
 
 ## Way to use
 
