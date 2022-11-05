@@ -1,4 +1,4 @@
-# Week9_YZ
+# Project3_SQL_YZ
 
 [![Python application test with Github Actions](https://github.com/nogibjj/Project3_SQL_YZ/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/Project3_SQL_YZ/actions/workflows/main.yml)
 
