@@ -5,7 +5,8 @@
 ## Overview
 
 This the repository for IDS 706 Data Engneering System individual project3. In this project, I generated an airbnb database and wrote sql queries using python libraries to create user profile of Airbnb including demographic information like age, gender, user language as well as service information like user destination for predicting which country a new user's first booking destination will be. I also built a command line interface to retrieve the plots of user information.  
-Here is the flow chart and the demo video:
+
+Here is the flow chart and the [demo video](https://teams.microsoft.com/l/message/19:184726d4bec04e6191f11a9c7f59766f@thread.tacv2/1667661216481?tenantId=cb72c54e-4a31-4d9e-b14a-1ea36dfac94c&groupId=428262e3-7a97-45de-8ed6-eb751b9cb87c&parentMessageId=1667661216481&teamName=IDS.706.01.F22&channelName=Week%2010%20Demo_Project%203&createdTime=1667661216481&allowXTenantAccess=false):
 
 <img src=https://user-images.githubusercontent.com/110933007/200093798-d7498f34-962b-4a62-86f3-0c74bfc3b54e.png width=80% height=80%>
 
