@@ -34,7 +34,9 @@ def userGender():
     palette_color = sns.color_palette('pastel')[0:2]
     
     # plotting data on chart
-    plt.pie(userGender, labels=keys, colors=palette_color, autopct='%.0f%%')
+    plt.pie(userGender, labels=keys, colors=palette_color, wedgeprops={"edgecolor":"black",
+                             'linewidth': 3,
+                            'antialiased': True}, autopct='%.0f%%')
     plt.title("User Gender Distribution")
     
     # displaying chart

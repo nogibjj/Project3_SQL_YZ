@@ -65,7 +65,6 @@ SELECT language, COUNT(language) AS lg_num FROM train_user WHERE language <> "en
 
 I used the typer library in python to build a command-line interface to retrieve the user information of airbnb. 
 
-
 ## Way to use
 
 

@@ -1,10 +1,4 @@
 import typer
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import os
-import sqlite3
 from userGender import userGender
 from userAge import userAge
 from userLanguage import userLanguage

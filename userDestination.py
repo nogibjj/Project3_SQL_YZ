@@ -29,7 +29,9 @@ def userDestination():
 
     # plot a pie chart of the country and count
     palette_color = sns.color_palette('pastel')[0:5]
-    plt.pie(destinationCount[0:5], labels=country[0:5], colors=palette_color, autopct='%.0f%%', pctdistance = 0.75, shadow=True,wedgeprops=wedgeprops, startangle=90)
+    plt.pie(destinationCount[0:5], labels=country[0:5], colors=palette_color, autopct='%.0f%%', pctdistance = 0.75, shadow=True,wedgeprops={"edgecolor":"black",
+                             'linewidth': 3,
+                            'antialiased': True})
     plt.title('User Destination Distribution')
 
     # save chart as image
