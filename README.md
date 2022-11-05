@@ -46,7 +46,7 @@ Excute the code to create the database:
 python load_db.py
 ```
 
-### Step 3 Query user information from the database to build user profile
+### Step 3: Query user information from the database to build user profile
 
 Here are the SQL queries that I used to extract user information from the database:
 
