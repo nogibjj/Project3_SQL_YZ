@@ -63,8 +63,19 @@ SELECT language, COUNT(language) AS lg_num FROM train_user WHERE language <> "en
 
 ### Step 4：Build a command line interface to retrieve user profile
 
-I used the typer library in python to build a command-line interface to retrieve the user information of airbnb. 
+I used the typer library in python to build a command-line interface to retrieve the user information of airbnb and save the plots. 
+
+<img src=https://user-images.githubusercontent.com/110933007/200096237-7c865ca6-6a5b-4968-96a6-dda5743b9d46.png width=60% height=60%>
+
+<img src=https://user-images.githubusercontent.com/110933007/200096299-53936220-2286-4f29-8ffd-644f074f1e22.png width=60% height=60%>
+
+
 
 ## Way to use
 
-
+```
+python cli-tool.py -- getuserage
+python cli-tool.py -- getuserdestination
+python cli-tool.py -- getusergender
+python cli-tool.py -- getuserlanguage
+```
