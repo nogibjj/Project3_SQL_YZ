@@ -44,7 +44,7 @@ def userLanguage():
     result1 = f"{num_en / (num_non_en + num_en) * 100:.2f}% of users speak English."
     result2 = f"Only {num_non_en / (num_non_en + num_en) * 100:.2f}% of users don't speak English."
 
-    # Get the user age information from the database
+    # Get non-English speaking user information from the database
     cursor.execute("""SELECT language, COUNT(language) AS lg_num FROM train_user WHERE language <> "en" GROUP BY language ORDER BY lg_num DESC;""")
     non_english_user = cursor.fetchall()
 
