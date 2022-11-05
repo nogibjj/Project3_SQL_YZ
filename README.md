@@ -74,6 +74,7 @@ I used the typer library in python to build a command-line interface to retrieve
 ## Way to use
 
 ```
+python cli-tool.py --help
 python cli-tool.py -- getuserage
 python cli-tool.py -- getuserdestination
 python cli-tool.py -- getusergender
